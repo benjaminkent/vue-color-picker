@@ -1,23 +1,19 @@
 <template>
-  <div class="window">
+  <div class="window" style="margin: 0 20px;">
     <div class="columns is-centered">
       <div class="column is-one-quarter">
-        <div
-          class="color-window"
-          :style="{ backgroundColor: pickedColorValues }"
-        ></div>
+        <div class="color-window" :style="{ backgroundColor: hsla }"></div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class ColorWindow extends Vue {
-  pickedColorValues: string = 'hsla(300, 100%, 50%, 0.9)'
-  // hue goes to 360
+  @Prop(String) readonly hsla!: string
 }
 </script>
 
