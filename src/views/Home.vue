@@ -27,7 +27,6 @@
 import { Component, Vue } from 'vue-property-decorator'
 import ColorWindow from '@/components/ColorWindow.vue'
 import MainHero from '@/components/MainHero.vue'
-import HslaStore from '@/store/modules/Hsla'
 
 @Component({
   components: {
